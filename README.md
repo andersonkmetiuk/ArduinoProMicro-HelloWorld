@@ -19,3 +19,11 @@
 |  **DC Current per I/O Pin** |               150 mA             |
 |      **Processor**          |         ATmega32U4 16 MHz        |
 |        **Memory**           | 2KB SRAM, 32KB FLASH, 1KB EEPROM |
+
+Configuring Visual Studio with [PlatformIO Extension](https://platformio.org/install/ide?install=vscode). Remember to set the **platform.ini** file with:
+```
+[env:sparkfun_promicro16]
+platform = atmelavr
+board = sparkfun_promicro16
+framework = arduino
+```
