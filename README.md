@@ -1,6 +1,8 @@
 # Initial development for Arduino Pro Micro
 
- <div><img src= assets/arduino-pro-micro.jpg align="left" /></div>
+ <div><img src= assets/arduino-pro-micro.jpg align="left " /></div>
+
+---
  
 |          **Board**          |          Arduino Nano            |
 |:---------------------------:|:--------------------------------:|
