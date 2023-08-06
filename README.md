@@ -36,4 +36,7 @@ If you are using Linux sometimes the device is not recognized in the USB port so
 
  <div><img src= assets/platformio.png align="left " /></div>
 
-When you figure the port out you can add it manually.
+When you figure the port out you can add it manually or use this command instead:
+```
+pio run --upload-port /dev/ttyACM0
+```
