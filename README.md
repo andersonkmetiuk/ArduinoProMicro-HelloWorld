@@ -52,3 +52,40 @@ pio run --upload-port /dev/ttyACM0
 - **VCC** is the voltage supplied to the on-board ATmega32U4. This voltage will depend on whether you're using a 3.3V/8MHz Pro Micro or a 5V/16MHz version, it'll be either 3.3V or 5V respectively. This voltage is regulated by the voltage applied to the RAW pin. If the board is powered through the 'RAW' pin (or USB), this pin can be used as an output to supply other devices.
 - **RST** can be used to restart the Pro Micro. This pin is pulled high by a 10k&Ohm; resistor on the board, and is active-low, so it must be connected to ground to initiate a reset. The Pro Micro will remain "off" until the reset line is pulled back to high.
 - **GND**, of course, is the common, ground voltage (0V reference) for the system.
+
+## Hello World
+[Source](https://learn.sparkfun.com/tutorials/pro-micro--fio-v3-hookup-guide/example-1-blinkies)
+```
+int RXLED = 17;  // The RX LED has a defined Arduino pin
+// Note: The TX LED was not so lucky, we'll need to use pre-defined
+// macros (TXLED1, TXLED0) to control that.
+// (We could use the same macros for the RX LED too -- RXLED1,
+//  and RXLED0.)
+
+void setup()
+{
+  pinMode(RXLED, OUTPUT);  // Set RX LED as an output
+  // TX LED is set as an output behind the scenes
+
+  Serial.begin(9600); //This pipes to the serial monitor
+  Serial.println("Initialize Serial Monitor");
+
+  Serial1.begin(9600); //This is the UART, pipes to sensors attached to board
+  Serial1.println("Initialize Serial Hardware UART Pins");
+}
+
+void loop()
+{
+  Serial.println("Hello world!");  // Print "Hello World" to the Serial Monitor
+  Serial1.println("Hello! Can anybody hear me?");  // Print "Hello!" over hardware UART
+
+  digitalWrite(RXLED, LOW);   // set the RX LED ON
+  TXLED0; //TX LED is not tied to a normally controlled pin so a macro is needed, turn LED OFF
+  delay(1000);              // wait for a second
+
+  digitalWrite(RXLED, HIGH);    // set the RX LED OFF
+  TXLED1; //TX LED macro to turn LED ON
+  delay(1000);              // wait for a second
+}
+
+```
