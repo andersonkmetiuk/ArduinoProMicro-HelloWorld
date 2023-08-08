@@ -35,7 +35,7 @@ For this board you will need the SparkFun Lib. You can find it more about it [he
 
 Here you can find a guide for the [Arduino IDE](https://github.com/sparkfun/Arduino_Boards) 
 
-[This](https://learn.sparkfun.com/tutorials/pro-micro--fio-v3-hookup-guide/all) is a great tutorial as well.
+[This](https://learn.sparkfun.com/tutorials/pro-micro--fio-v3-hookup-guide/all) is a great tutorial as well. Installation [Windows](https://learn.sparkfun.com/tutorials/pro-micro--fio-v3-hookup-guide/installing-windows) and [Linux/Mac](https://learn.sparkfun.com/tutorials/pro-micro--fio-v3-hookup-guide/installing-mac--linux)
 
 If you are using Linux sometimes the device is not recognized in the USB port so you can use the PlatformIO tool to figure it out like this:
 
