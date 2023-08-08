@@ -56,6 +56,7 @@ pio run --upload-port /dev/ttyACM0
 ## Hello World
 [Source](https://learn.sparkfun.com/tutorials/pro-micro--fio-v3-hookup-guide/example-1-blinkies)
 ```
+#include <Arduino.h>
 int RXLED = 17;  // The RX LED has a defined Arduino pin
 // Note: The TX LED was not so lucky, we'll need to use pre-defined
 // macros (TXLED1, TXLED0) to control that.
